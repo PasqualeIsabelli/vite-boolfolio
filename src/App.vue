@@ -1,24 +1,44 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue';
+  import NavBar from './components/NavBar.vue';
+  import Footer from './components/Footer.vue';
 
-	export default {
+  export default {
     components: {
-      ProjectCard
+      NavBar,
+      Footer,
     },
     data() {
-      return {}
-    }
-	};
+      return {
+
+      };
+    },
+    methods: {
+
+    },
+  };
 </script>
 
 <template>
-  <div class="container">
-    <ProjectCard></ProjectCard>
-  </div>
+  <header>
+    <NavBar></NavBar>
+  </header>
+  <main>
+    <router-view></router-view>
+  </main>
+  <footer>
+    <Footer></Footer>
+  </footer>
 </template>
 
 <style lang="scss">
 @use './styles/partials/variables' as *;
 @use './styles/partials/mixins' as *;
+
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
 
 </style>

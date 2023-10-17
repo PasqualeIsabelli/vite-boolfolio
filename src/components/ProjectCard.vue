@@ -40,7 +40,7 @@
     <div class="col" v-for="project in projects" :key="project.id">
       <div class="card p-0 h-100">
         <img :src="getImageUrl(project)" class="card-img-top">
-        <div class="card-body ">
+        <div class="card-body">
           <h5 class="card-title">{{ project.title }}</h5>
           <div class="d-flex align-items-center gap-2">
             <span class="badge bg-secondary">{{ project.type.type }}</span>
