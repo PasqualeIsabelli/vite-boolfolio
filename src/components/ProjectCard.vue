@@ -1,5 +1,6 @@
 <script>
   import axios from 'axios';
+  import dayjs from 'dayjs';
 
 	export default {
 
@@ -24,6 +25,9 @@
       getImageUrl(project){
         return `http://127.0.0.1:8000/storage/${project.thumb}`;
       },
+      formatDate(date) {
+        return dayjs(date).format('DD/MM/YYYY')
+      }
     },
     mounted() {
       this.fetchData();
@@ -41,6 +45,7 @@
           <div class="d-flex align-items-center gap-2">
             <span class="badge bg-secondary">{{ project.type.type }}</span>
             <p v-for="tech in project.technologies" class="badge m-0" :style="`background-color: rgb(${ tech.color })`"><i :class="`fa-brands ${ tech.name }`"></i></p>
+            <p>{{ formatDate(project.creation_date) }}</p>
           </div>
         </div>
       </div>
