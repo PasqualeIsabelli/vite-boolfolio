@@ -39,7 +39,7 @@
           <div class="card p-0 h-100">
             <img :src="getImageUrl(project)" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">{{ project.title }}</h5>
+              <h5 class="card-title text-white">{{ project.title }}</h5>
               <div class="d-flex align-items-center gap-2">
                 <span class="badge bg-secondary">{{ project.type.type }}</span>
                 <p v-for="tech in project.technologies" class="badge m-0" :style="`background-color: rgb(${ tech.color })`"><i :class="`fa-brands ${ tech.name }`"></i></p>
@@ -58,5 +58,9 @@
 <style lang="scss" scoped>
   @use '../styles/partials/variables' as *;
   @use '../styles/partials/mixins' as *;
+
+  .card {
+    background-color: $color-primary !important;
+  }
 
 </style>

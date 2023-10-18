@@ -10,7 +10,7 @@
 
 <template>
   <footer class="bg-dark">
-    <div class="container py-5">
+    <div class="container py-4">
       <h1 class="text-center fw-bold text-white">FOOTER</h1>
     </div>
   </footer>

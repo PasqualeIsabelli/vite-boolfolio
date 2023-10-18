@@ -12,6 +12,10 @@
             type: index,
           },
           {
+            name: Contatti,
+            type: contacts,
+          },
+          {
             name: Login,
             type: login,
           },
@@ -32,6 +36,7 @@
 
           <li><router-link class="color text-decoration-none" :to="{name: 'home'}">Home</router-link></li>
           <li><router-link class="color text-decoration-none" :to="{name: 'index'}">Progetti</router-link></li>
+          <li><router-link class="color text-decoration-none" :to="{name: 'contacts'}">Contatti</router-link></li>
           <li><router-link class="color text-decoration-none" :to="{name: 'login'}">Login</router-link></li>
         </ul>
       </div>
